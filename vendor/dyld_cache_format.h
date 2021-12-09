@@ -72,7 +72,7 @@ struct dyld_cache_header
 	uint64_t	dylibsTrieAddr;			// (unslid) address of trie of indexes of all cached dylibs
 	uint64_t	dylibsTrieSize;			// size of trie of cached dylib paths
 	uint64_t	otherImageArrayAddr;		// (unslid) address of ImageArray for dylibs and bundles with dlopen closures
-    uint64_t	otherImageArraySizeu;		// size of ImageArray for dylibs and bundles with dlopen closures
+        uint64_t	otherImageArraySizeu;		// size of ImageArray for dylibs and bundles with dlopen closures
 	uint64_t	otherTrieAddr;			// (unslid) address of trie of indexes of all dylibs and bundles with dlopen closures
 	uint64_t	otherTrieSize;			// size of trie of dylibs and bundles with dlopen closures
 	uint32_t	mappingWithSlideOffset;		// file offset to first dyld_cache_mapping_and_slide_info
