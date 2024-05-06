@@ -460,7 +460,7 @@ struct substitute_image *substitute_open_image(const char *filename) {
 
     void* image;
     if (isUsingDyld4) {
-        image = dyld4_Loader_loadAddress((uint64_t)dlhandle>>1, *dyld4_runtimeState_addr);
+        image = dyld4_Loader_loadAddress((const void *)(uintptr_t)((uintptr_t)dlhandle>>1), *dyld4_runtimeState_addr);
     } else if (isUsingDyld3) {
         image = (void*)((((uintptr_t)dlhandle) & (-2)) << 5);
     } else {
